@@ -20,9 +20,12 @@ public class A3Q2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        //city and robot
         City kw = new City();
         Robot bob = new Robot(kw, 0, 0, Direction.EAST);
 
+        //creating the box for bob to go around
         new Wall(kw, 1, 1, Direction.WEST);
         new Wall(kw, 2, 1, Direction.WEST);
         new Wall(kw, 1, 1, Direction.NORTH);
@@ -32,6 +35,7 @@ public class A3Q2 {
         new Wall(kw, 2, 1, Direction.SOUTH);
         new Wall(kw, 2, 2, Direction.SOUTH);
 
+        //creating the loop so bob can keep go around the box
         while (true) {
             for (int i = 0; i < 3; i = i + 1) {
                 bob.move();
@@ -42,9 +46,6 @@ public class A3Q2 {
                 bob.turnLeft();
 
             }
-
-
         }
-
     }
 }

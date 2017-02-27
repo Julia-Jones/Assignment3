@@ -27,7 +27,7 @@ public class A3Q3 {
         City kw = new City();
         RobotSE bob = new RobotSE(kw, 1, 1, Direction.EAST);
 
-        //creating the walls and things 
+        //creating the walls 
         new Wall(kw, 1, 1, Direction.NORTH);
         new Wall(kw, 1, 2, Direction.NORTH);
         new Wall(kw, 1, 3, Direction.NORTH);
@@ -42,7 +42,7 @@ public class A3Q3 {
         new Wall(kw, 3, 2, Direction.SOUTH);
         new Wall(kw, 3, 3, Direction.SOUTH);
         new Wall(kw, 3, 4, Direction.SOUTH);
-
+        //creating things
         new Thing(kw, 1, 2);
         new Thing(kw, 2, 2);
         new Thing(kw, 2, 3);
@@ -50,14 +50,17 @@ public class A3Q3 {
         new Thing(kw, 3, 1);
         new Thing(kw, 3, 4);
 
+           //while bob can move straight, he moves straight
         while (true) {
             while (bob.frontIsClear() == true) {
                 bob.pickAllThings();
                 bob.move();
             }
+            //if bob can pick up the objects, it picks it up
             while (bob.canPickThing()) {
                 bob.pickAllThings();
             }
+            //makes bob go to the next street 
             while (bob.getAvenue() == 1) {
                 bob.turnLeft();
                 bob.move();
@@ -66,17 +69,19 @@ public class A3Q3 {
                 bob.move();
                 
             }            
+            //makes him turn around
             while(bob.frontIsClear() == false) {
                 bob.turnAround();
 
             }
-            
+            // when bob is done he goes back to his "home"
           if(bob.getAvenue()==4 && bob.getStreet()==3){
           break;
           
         }
 
     }
+        //how he moves back to his "home"
          bob.turnRight();
         bob.move();
         bob.move();
