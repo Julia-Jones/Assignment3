@@ -16,12 +16,5 @@ public class A3Q4 {
     public static void main(String[] args) {
         // TODO code application logic here
         //creating the city and bob the robot
-        
-        
-        
-        
-        
-        
-        
     }
 }

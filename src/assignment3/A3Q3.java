@@ -50,7 +50,7 @@ public class A3Q3 {
         new Thing(kw, 3, 1);
         new Thing(kw, 3, 4);
 
-           //while bob can move straight, he moves straight
+        //while bob can move straight, he moves straight
         while (true) {
             while (bob.frontIsClear() == true) {
                 bob.pickAllThings();
@@ -67,22 +67,22 @@ public class A3Q3 {
                 bob.turnLeft();
                 bob.pickAllThings();
                 bob.move();
-                
-            }            
+
+            }
             //makes him turn around
-            while(bob.frontIsClear() == false) {
+            while (bob.frontIsClear() == false) {
                 bob.turnAround();
 
             }
             // when bob is done he goes back to his "home"
-          if(bob.getAvenue()==4 && bob.getStreet()==3){
-          break;
-          
-        }
+            if (bob.getAvenue() == 4 && bob.getStreet() == 3) {
+                break;
 
-    }
+            }
+
+        }
         //how he moves back to his "home"
-         bob.turnRight();
+        bob.turnRight();
         bob.move();
         bob.move();
         bob.turnLeft();
@@ -90,5 +90,5 @@ public class A3Q3 {
         bob.move();
         bob.move();
         bob.turnAround();
-  }
+    }
 }
