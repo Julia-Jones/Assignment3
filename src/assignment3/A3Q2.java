@@ -36,16 +36,17 @@ public class A3Q2 {
         new Wall(kw, 2, 2, Direction.SOUTH);
 
         //creating the loop so bob can keep go around the box
-        while (true) {
-            for (int i = 0; i < 3; i = i + 1) {
-                bob.move();
-                bob.move();
-                bob.move();
-                bob.turnLeft();
-                bob.turnLeft();
-                bob.turnLeft();
 
-            }
+        int counter = 0;
+        while (counter < 8) {
+
+            bob.move();
+            bob.move();
+            bob.move();
+            bob.turnLeft();
+            bob.turnLeft();
+            bob.turnLeft();
+            counter = counter + 1;
         }
     }
 }
