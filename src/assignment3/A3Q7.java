@@ -65,7 +65,7 @@ public class A3Q7 {
         new Wall(kw,5,5,Direction.SOUTH);
         
         //making bob go around the first box\
-        for(int loop=0; loop < 4; loop= loop +1 ){
+        for(int i=0; i < 4; i= i +1 ){
         int count = 0;
         
         while(count < 4){
