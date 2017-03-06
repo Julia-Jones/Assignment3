@@ -42,38 +42,37 @@ public class A3Q6 {
         new Thing(kw, 4, 1);
         new Thing(kw, 4, 1);
 
-       
+        // bob moves onto first pile
         int counter = 0;
-        
         bob.move();
-        
-        while(bob.canPickThing()){
-            
-            if(bob.canPickThing()){
+        // if bob can pick thing he picks all things
+        while (bob.canPickThing()) {
+
+            if (bob.canPickThing()) {
                 bob.pickAllThings();
                 counter++;
-            
-        }
-        counter = bob.countThingsInBackpack();
-        bob.turnLeft();
-        
-        for(int i =0; i < counter; i++){
-         bob.putThing();
-         bob.move();
-                    
-        }
-          
-        bob.turnAround();
-        
-        for(int i = 0; i < counter;){
+                //turn left 
+            }
+            counter = bob.countThingsInBackpack();
+            bob.turnLeft();
+            //when you put thing then move one space
+            for (int i = 0; i < counter; i++) {
+                bob.putThing();
+                bob.move();
+
+            }
+            //turn around and go back
+            bob.turnAround();
+
+            for (int i = 0; i < counter;) {
+                bob.move();
+                counter--;
+            }
+
+            bob.turnLeft();
             bob.move();
-            counter--;
-        }
-        
-        bob.turnLeft();
-        bob.move();
-       
-     
+
+
         }
     }
 }
