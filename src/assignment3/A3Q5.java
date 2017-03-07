@@ -39,7 +39,7 @@ public class A3Q5 {
 
         //moving bob to the first spot
         bob.move();
-        //making bob move, pick thing, move , put it down then turn around and go back
+        //making bob move, pick thing, move , put it down then turn around and go back 10 times
         for (int i = 0; i < 10; i = i + 1) {
 
             bob.pickThing();
