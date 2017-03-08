@@ -43,11 +43,11 @@ public class A3Q4 {
         //moving bob to the outside walls
         bob.move();
 
-
+        //to make bob turn and check if he can go through or not
         while (true) {
             if (bob.frontIsClear() == true) {
                 bob.turnRight();
-
+                //turn out and leave box
                 if (bob.frontIsClear() == true) {
                     bob.move();
                     break;
